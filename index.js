@@ -79,13 +79,16 @@
 
 //  print even no from 0 to 100
 
-for( let i=0; i<=100; i++){
-    if(i%2==0){
-        console.log(i);
+// for( let i=0; i<=100; i++){
+//     if(i%2==0){
+//         console.log(i);
         
-    }
-    // console.log( "numbers : ",i); // to print all numbers 
-}
+//     }
+//     // console.log( "numbers : ",i); // to print all numbers 
+// }
+
+// console.log("fuck u bitch");
+
 
 
 
