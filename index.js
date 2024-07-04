@@ -146,10 +146,10 @@
 // console.log(str.charAt(2)); // --- give the ch at that  index
 
 // assignment que
-let userName ="sahilverma";
-console.log( "old user name is ",userName);
-let newUsername = `username should be @${userName}${userName.length}`;
-console.log(newUsername);
+// let userName ="sahilverma";
+// console.log( "old user name is ",userName);
+// let newUsername = `username should be @${userName}${userName.length}`;
+// console.log(newUsername);
 
 
 
