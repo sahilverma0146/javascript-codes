@@ -88,15 +88,70 @@
 // }
 
 // strings tpopic --- sequence of ch. strings also behave like the objects(string.length)
+
 // let str = " sahilverma";
 // let str2 = ' sahilverma';
+
+// console.log(str);
 // console.log(str2);
+
 // console.log(str.length);
 
 // console.log(str[3]); // this gives the ch of that index which is pressnt in the string
 
 
 //  tempelate literals
+
+// `` -- backticks
+// let specialstring = ` myself sahil verma`;
+// console.log( specialstring);
+
+// // using type of operator
+// let b = 50;
+// console.log(typeof b );
+
+// let obj ={
+//     item : "pen",
+//     cost : 20,
+
+// };                              // ${___} -- string intetrpolation
+// let output =`the name of item is ${obj.item} and its cost is ${obj.cost} rupees`;
+// console.log(output); 
+
+//   escape ch --- \n -- string k ander next line 
+//   tab space --- \t
+// console.log("sahil \n verma");
+// let str = console.log("sahil \t verma");    //13
+// console.log(str.length);       //12
+
+
+
+// strings methods  -- - methid means kch kaam karna
+// strings are immutable in js means that hey r never chnge
+
+
+// let str2 ="   sahil       verma    ";
+// console.log(str2.trim()); // trim tje last n start gp in string
+
+
+// let str ="sahil verma";
+// // console.log(str.toUpperCase()); // this method do pass by value mean dont change the value of the string
+// // console.log(str.toLowerCase());
+// let str1="123456789"
+// // console.log(str1.slice(3,8));
+// // console.log(str1.concat(str)); // str + str1 -- give same result -- 123456789sahil verma
+
+// console.log(str.replace("verma"," soni"));
+// console.log(str.replaceAll("a","g"));
+// console.log(str.charAt(2)); // --- give the ch at that  index
+
+// assignment que
+let userName ="sahilverma";
+console.log( "old user name is ",userName);
+let newUsername = `username should be @${userName}${userName.length}`;
+console.log(newUsername);
+
+
 
 
 
