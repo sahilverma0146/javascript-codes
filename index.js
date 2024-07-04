@@ -87,7 +87,16 @@
 //     // console.log( "numbers : ",i); // to print all numbers 
 // }
 
-// console.log("fuck u bitch");
+// strings tpopic --- sequence of ch. strings also behave like the objects(string.length)
+// let str = " sahilverma";
+// let str2 = ' sahilverma';
+// console.log(str2);
+// console.log(str.length);
+
+// console.log(str[3]); // this gives the ch of that index which is pressnt in the string
+
+
+//  tempelate literals
 
 
 
