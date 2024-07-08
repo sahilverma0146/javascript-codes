@@ -1,1 +1,1 @@
-the complete javascript by apna college 
+The complete javascript by apna college 
