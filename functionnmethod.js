@@ -49,3 +49,76 @@
 // vowel("aeiou");
 
 
+// for each loop in arrays  --- method  re basically the  --- only  for arr
+//   array_name.foreach(callback fxn) --- callback functtion a function which is passed as a arrgument in another function
+// higher order function / higher order methods r those who tkes the another  function as a paramter and thoose function which return some function
+
+// let arr= [2,3,4,5,6];
+
+// arr.forEach( (val ,index , arr)=>{
+//     console.log(val.toString() , index, arr);
+// });
+
+
+// prob --- for a each given array of numbers , print the squqre of each value using the foreach loop
+
+// let arr=[1,2,3,4,5,6];
+
+// arr.forEach((square)=>{
+//     // let double=console.log(square);
+//     double = square*square;
+//     console.log(double);
+
+// });
+
+
+
+// let arr1=[1,2,3,4,5,6];
+
+// let double=(square)=>{
+//     // let double=console.log(square);
+//     double = square*square;
+//     console.log(double);
+
+// }
+// arr1.forEach(double);
+
+//             array map--- the result stored in the new array
+
+// let num=[1,2,3,4,5];
+// num.map((val)=>{
+//     console.log(val);
+// });
+
+// let num1=[1,2,3,4,5];
+// let newarr=num1.map((val)=>{
+//     return val;
+// });
+// console.log(num); // new arr formed
+// console.log(num1);
+
+
+//  filter
+// let arr= [1,2,3,4,5,6,7,8,9,10];
+// let newarr =arr.filter((val)=>{
+//     return (val %2 == 0);
+// });
+
+// console.log(newarr);
+
+// reduce --- reduce the arry into a single value
+
+// let arr=[1,2,3,4];
+
+// let new_arr=arr.reduce((res , current)=>{
+//     return (res+ current);
+
+// });
+// console.log(new_arr);
+// console.log("hello world");
+
+
+
+
+
+
