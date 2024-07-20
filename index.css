@@ -11,11 +11,22 @@
 }
 
 
-.boxes{
+/* .boxes{
     height: 100px;
     width: 100px;
     border: 2px solid black;
     text-align: center;
     background-color: yellow;
     margin: 2%;
-};
+}; */
+
+
+#box{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    text-align: center;
+    padding-top: 2%;
+    color: aliceblue;
+
+}
