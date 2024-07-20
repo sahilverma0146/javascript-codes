@@ -5,4 +5,17 @@
     font-size: 36px;
     
 
+}
+#heading2{
+    font-size: 45px;
+}
+
+
+.boxes{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: yellow;
+    margin: 2%;
 };
