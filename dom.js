@@ -56,9 +56,52 @@
 // console.log(element.innerText="from appna college students");
 
 
-// problem 2 --- question of 2 divs
+// problem 2 --- question of 3 divs by changing the inner text of it 
 
-// let box = document.querySelector(".boxes");
-// // console.log(box);
-// let div = box[2].innertext="new box one";
-// console.log(div);
+// let box = document.querySelectorAll(".boxes");
+// console.log(box);
+// box[0].innerText="new box 0";
+// box[1].innerText="new box 1";
+// box[2].innerText="new box 2";
+
+// ---------part 2------
+// attributes --- the editional information present in the nodes like id , class
+
+
+// let div = document.querySelector("div");
+// console.log(div.innerText);
+
+// let id = div.getAttribute("id");
+// console.log(id);
+
+// let name2 = div.getAttribute("name");
+// console.log(name2);
+ 
+// let newatt = div.setAttribute("id","234"); // change the value od fif from  box to 234 in the inspect view
+// console.log(newatt);
+
+// let para = document.querySelector("p2");
+// console.log(para);
+// console.log(para.innerText);
+// console.log(para.getAttribute("class"));
+
+// ------ style attribute-----
+
+// let div= document.getElementById("box");
+// let newdiv=console.log(div.style.backgroundColor="pink");
+// console.log(newdiv);
+// div.style.fontSize="34px";
+// div.style.visibility="hidden";
+
+
+//  ---- new elements insertion ---- 
+
+// create  a new element without using html
+let newbut =document.createElement("button");
+newbut.innerText="hello sahil";
+console.log(newbut);
+
+// wnt to display i ton the screen --- 4 ways
+
+
+ 
