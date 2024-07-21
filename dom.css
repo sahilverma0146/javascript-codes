@@ -1,0 +1,51 @@
+*{
+    height: 100px;
+    width: 100px;
+}
+
+.heading-cls{
+    background-color: rgb(94, 230, 79);
+    padding: 3%;
+    font-style: italic;
+    font-size: 36px;
+    
+
+}
+#heading2{
+    font-size: 45px;
+}
+
+
+.boxes{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: yellow;
+    margin: 2%;
+};
+
+
+#box{
+    height: 250px;
+    width: 100px;
+    background-color: blue;
+    text-align: center;
+    padding-top: 2%;
+    color: aliceblue;
+
+}
+
+.content{
+    height: 500px; 
+    width:500px;
+    border: 2px solid black;
+    align-content: center;
+    text-align: center;
+}
+
+.newcontent{
+    background-color: green;
+    color: white;
+
+}
