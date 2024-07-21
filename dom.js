@@ -97,11 +97,54 @@
 //  ---- new elements insertion ---- 
 
 // create  a new element without using html
-let newbut =document.createElement("button");
-newbut.innerText="hello sahil";
-console.log(newbut);
+
+
+// let newBut =document.createElement("button");
+// newBut.innerText="hello sahil";
+// console.log(newBut);
+// console.log(newBut.style.backgroundColor="white");
 
 // wnt to display i ton the screen --- 4 ways
 
+// --- end at node -- append
+// let div =document.querySelector("#box");
+// div.append(newBut);
 
- 
+//  starting
+// let div1 =document.querySelector("#box");
+// div1.prepend(newBut);
+
+// before --- before that node
+// let div =document.querySelector("#box");
+// div.before(newBut);
+
+// after --- after that node
+// let div =document.querySelector("#box");
+// div.after(newBut);
+
+//  same metthod is used for delete
+
+
+
+
+//  practice questions 
+
+// let abutton = document.createElement("button");
+// abutton.innerText="click me";
+// abutton.style.backgroundColor="red";
+// abutton.style.color="white";
+
+// let button = document.querySelector("body");
+// button.append(abutton);
+
+
+//  problem 2
+
+
+// let para =document.querySelector("p");
+// // para.getAttribute("class");
+// // para.setAttribute("class", "newcontent");
+// // here setattribute do overwrite on the class content to ssolve this problem use classlist
+
+// //  classlist --- collection of the all  the attributes  of the node 
+// para.classList.add("newcontent");
