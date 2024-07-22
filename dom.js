@@ -99,16 +99,16 @@
 // create  a new element without using html
 
 
-let newBut =document.createElement("button");
-newBut.innerText="hello sahil";
-console.log(newBut);
-console.log(newBut.style.backgroundColor="blue");
+// let newBut =document.createElement("button");
+// newBut.innerText="hello sahil";
+// console.log(newBut);
+// console.log(newBut.style.backgroundColor="blue");
 
-// wnt to display i ton the screen --- 4 ways
+// // wnt to display i ton the screen --- 4 ways
 
-// --- end at node -- append
-let div =document.querySelector("#box");
-div.append(newBut);
+// // --- end at node -- append
+// let div =document.querySelector("#box");
+// div.append(newBut);
 
 //  starting
 // let div1 =document.querySelector("#box");
