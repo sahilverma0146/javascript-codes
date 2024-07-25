@@ -38,7 +38,7 @@
 //     },2000 );
 // }
 //  // callback-hell
-// getData(1, ()=>{
+// getData(1, ()=>{ // 1--- dataid
 //     getData(2 , ()=>{
 //         getData(3,()=>{
 //             getData(4);
@@ -56,12 +56,12 @@
 // let promise = new Promise ((resolve, reject) =>{  // RESOLVE --- OUR TASK IS COMPLETED  REJECT --- OUR TASK IS FILLFULL WITH SOME ERRORS
 //     console.log("i am a promise");
 //     resolve("fillfulled");
-//     reject("some error")
+//     // reject("some error");
 // });
 
 
-// promise --- promise.catch() --- use for rject
-//         --- promise.then() --- use for resolve 
+//promise --- promise.catch() --- use for rject
+ //       --- promise.then() --- use for resolve 
 // const getPromise =()=>{
 //     return new Promise ((resolve, reject) =>{
 //         console.log("i am a promise");
@@ -205,19 +205,20 @@ function api(){
 
 //   by async wait we hold the execution that we hold by the promise-chainning
 
-// async function getWetherData(){
-//     await api(); // 1st call
-//     console.log("api(2) is calling now");
-//     await api();// 2nd
+async function getWetherData(){
+    console.log("api(1) is calling now");
+    await api(); // 1st call
+    console.log("api(2) is calling now");
+    await api();// 2nd
 
-// }
+}
 
 // better way 
 // async await >> promise-chain >> callback-Hell
 
 //  IIFE --- IMMEDIATELY INVOKED FUNCTION EXPRESSION --- USE FOR DIRECT EXECUTION NOT REQ OF FUNCTION CALLBACK
-( async function getWetherData(){
-    await api(); // 1st call
-    console.log("api(2) is calling now");
-    await api();// 2nd
-})();
+// ( async function getWetherData(){
+//     await api(); // 1st call
+//     console.log("api(2) is calling now");
+//     await api();// 2nd
+// })();
