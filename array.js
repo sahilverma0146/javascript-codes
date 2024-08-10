@@ -6,10 +6,10 @@
 // console.log(typeof students); // object but it dont have keys it hace indexes
 
 
-// let marks =[23,45,67,89];
-// console.log(marks[0]);
-// console.log(marks[1]);
-// console.log(marks[2]);
+let marks =[23,45,67,89];
+console.log(marks[0]);
+console.log(marks[1]);
+console.log(marks[2]);
 // console.log(marks[3]);
 // console.log(marks[4]); // gives undefined
 // marks[0]=456;
