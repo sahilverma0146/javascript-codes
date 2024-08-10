@@ -73,7 +73,7 @@
 // };
 
 // for( let key in student){
-//     console.log( "keys :",key , "value :", student[key] );
+//     console.log( "keys :",key , 'value ' , student[key] );
 // }
 
 
@@ -138,7 +138,7 @@
 // // console.log(str.toUpperCase()); // this method do pass by value mean dont change the value of the string
 // // console.log(str.toLowerCase());
 // let str1="123456789"
-// // console.log(str1.slice(3,8));
+// console.log(str1.slice(3,8));
 // // console.log(str1.concat(str)); // str + str1 -- give same result -- 123456789sahil verma
 
 // console.log(str.replace("verma"," soni"));
