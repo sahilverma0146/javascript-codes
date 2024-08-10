@@ -28,15 +28,19 @@
 
 // callback-hell --- nesting of callback 
 
-// function getData(dataId , getNextData){
-//     setTimeout( ()=>{
-//         console.log("data" , dataId);
-//         if(getNextData){  // this case run only when we have the call-back function 
-//             getNextData();
-//         }
+function getData(dataId , getNextData){
+    setTimeout( ()=>{
+        console.log("data" , dataId);
+        if(getNextData){  // this case run only when we have the call-back function 
+            getNextData();
+        }
         
-//     },2000 );
-// }
+    },2000 );
+}
+
+// getData(4570);
+
+
 //  // callback-hell
 // getData(1, ()=>{ // 1--- dataid
 //     getData(2 , ()=>{
@@ -45,6 +49,13 @@
 //         });
 //     });
 // });
+
+// getData(4570,()=>{
+//     console.log(" you hve passed the callback fxn");
+//     getData(3977,()=>{
+//         console.log("inner fxn strt");
+//     })
+// })
 
 // promises solve callback-hell
 
@@ -56,7 +67,7 @@
 // let promise = new Promise ((resolve, reject) =>{  // RESOLVE --- OUR TASK IS COMPLETED  REJECT --- OUR TASK IS FILLFULL WITH SOME ERRORS
 //     console.log("i am a promise");
 //     resolve("fillfulled");
-//     // reject("some error");
+//     reject("some error");
 // });
 
 
@@ -65,8 +76,8 @@
 // const getPromise =()=>{
 //     return new Promise ((resolve, reject) =>{
 //         console.log("i am a promise");
-//         // resolve("success");
-//         reject("error");
+//         resolve("success");
+//         // reject("error");
 //     });
 // };
 
@@ -77,7 +88,7 @@
 //     console.log("promise fillfulled" , res);
 // });
 
-// //  execute when the promise is rejected
+//  execute when the promise is rejected
 // promise.catch((err)=>{ // error
 //     console.log(" failed" ,err ); // err gives the val we give in the reject
 // });
@@ -100,6 +111,8 @@
 //     });
    
 // }
+
+
 
 // getData(1);
 
@@ -173,7 +186,7 @@
 // let p1 = async1();
 // p1.then((res)=>{
 //     console.log(res);
-//     console.log("fetching data2......");
+//     console.log("getting data2......");
 //     let p2 = async2();
 //     p2.then((res)=>{
 //         console.log(res);
@@ -190,29 +203,32 @@
 //     console.log("hello");
 // }
 
-//  await --- pause the execution untill the promise is not settled
+//  await --- pause the execution untill the promise is not settled ( jbh tk await vali line ka code means vho promise apni value return nhi krta tb tk code execute nhi hoga)
 
 
-function api(){
-    return  new Promise((resolve , reject)=>{
-        setTimeout(()=>{
-            console.log("check whether");
-        resolve(200);
-        },2000);
+// function api(){
+//     return  new Promise((resolve , reject)=>{
+//         setTimeout(()=>{
+//             console.log("check whether");
+//         resolve(200);
+//         },5000);
 
-    });
-};
+//     });
+// };
+
+// api();
 
 //   by async wait we hold the execution that we hold by the promise-chainning
 
-async function getWetherData(){
-    console.log("api(1) is calling now");
-    await api(); // 1st call
-    console.log("api(2) is calling now");
-    await api();// 2nd
+// async function getWetherData(){
+//     console.log("api(1) is calling now");
+//     await api(); // 1st call
+//     console.log("api(2) is calling now");
+//     await api();// 2nd
 
-}
+// }
 
+// getWetherData();
 // better way 
 // async await >> promise-chain >> callback-Hell
 
