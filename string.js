@@ -110,13 +110,17 @@
 // let b = 50;
 // console.log(typeof b );
 
-// let obj ={
-//     item : "pen",
-//     cost : 20,
+let obj ={
+    item : "pen",
+    cost : 20,
 
-// };                              // ${___} -- string intetrpolation
+};                              // ${___} -- string intetrpolation
 // let output =`the name of item is ${obj.item} and its cost is ${obj.cost} rupees`;
 // console.log(output); 
+
+//  to convert the object into the array 
+let newArr = Object.entries(obj).map(([key, value]) => `${key}: ${value}`);
+console.log(newArr);
 
 //   escape ch --- \n -- string k ander next line 
 //   tab space --- \t
