@@ -50,7 +50,7 @@
 
 
 // for each loop in arrays  --- method  re basically the  --- only  for arr
-//   array_name.foreach(callback fxn) --- callback functtion a function which is passed as a arrgument in another function
+//   array_name.(callback fxn) --- callback functtion a function which is passed as a arrgument in another function
 // higher order function / higher order methods r those who tkes the another  function as a paramter and thoose function which return some function
 
 // let arr= [2,3,4,5,6];
