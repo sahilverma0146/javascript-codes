@@ -6,14 +6,14 @@ const p = document.querySelector("#para");
 const URL ="https://cat-fact.herokuapp.com/facts";
 
 let promise = fetch(URL);
-console.log(promise);
+console.log("promise",promise);
 
 (async()=>{
     console.log("getting data1.....");
     let response = await fetch(URL);
     console.log(response);  // response is a object
     let data = await response.json();
-    p.innerText=data[0].text;
+    p.innerText=data[1].text;
 
 })();
 
