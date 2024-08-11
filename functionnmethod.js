@@ -92,10 +92,10 @@
 
 // let num1=[1,2,3,4,5];
 // let newarr=num1.map((val)=>{
-//     return val;
+//     return val*2;
 // });
-// console.log(num); // new arr formed
-// console.log(num1);
+// console.log(num1); // new arr formed
+// console.log(newarr);
 
 
 //  filter
@@ -103,33 +103,33 @@
 // let newarr =arr.filter((val)=>{
 //     return (val %2 == 0);
 // });
-
+// console.log(arr);
 // console.log(newarr);
 
 // reduce --- reduce the arry into a single value
 
-// let arr=[1,2,3,4];
+let arr=[1,2,3,4];
 
-// let new_arr=arr.reduce((res , current)=>{
-//     return (res+ current);
+let new_arr=arr.reduce((res , current)=>{
+    return (res+ current);
 
-// });
-// console.log(new_arr);
+});
+console.log(new_arr);
 // console.log("hello world");
 
 
 // In JavaScript, functions are first-class objects, meaning they can be used as values just like numbers, strings, and arrays.
 //    n the variable in which the function store to use tht function value we hve to write the variavle as a calling function to use that function value 
-function createHelloWorld(){
-    return newFun=()=>{
-        return "helo ...";
-    }
-};
+// function createHelloWorld(){
+//     return newFun=()=>{
+//         return "helo ...";
+//     }
+// };
 
-// // console.log(createHelloWorld);
-let print=createHelloWorld();
-console.log(print());
-s
+// // // console.log(createHelloWorld);
+// let print=createHelloWorld();
+// console.log(print());
+
 
 
 
