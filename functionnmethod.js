@@ -118,7 +118,18 @@
 // console.log("hello world");
 
 
+// In JavaScript, functions are first-class objects, meaning they can be used as values just like numbers, strings, and arrays.
+//    n the variable in which the function store to use tht function value we hve to write the variavle as a calling function to use that function value 
+function createHelloWorld(){
+    return newFun=()=>{
+        return "helo ...";
+    }
+};
 
+// // console.log(createHelloWorld);
+let print=createHelloWorld();
+console.log(print());
+s
 
 
 
