@@ -131,5 +131,16 @@ console.log(new_arr);
 // console.log(print());
 
 
+// closure --- function ke ander ek aur function
+
+let outer=()=>{
+    const name="sahil verma";
+
+     let inner=()=>{
+         return console.log(name);
+    }
+}
+const print =outer();
+console.log(print);
 
 
