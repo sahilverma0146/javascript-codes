@@ -53,20 +53,68 @@
 
 //   currying
 
-function email(mailId) {
-  return function data(subject) {
-    return function body(message) {
-      return `You Are Sending to  ${mailId} having ${subject} with${message} `;
-    };
-  };
+// function email(mailId) {
+//   return function data(subject) {
+//     return function body(message) {
+//       return `You Are Sending to  ${mailId} having ${subject} with${message} `;
+//     };
+//   };
+// }
+
+// let userName = email("sahilverma22146@gmail.com");
+// // console.log(userName);
+
+// let message = userName("DSA");
+// let print =message("u re gr8 men");
+// console.log(print);
+// // ES6
+// // const print = email("sahilverma22146@gmail.com")("hello sir")("u  emotions bro@@");
+// // console.log(print);
+
+//  composition --- composing infiinite functions in one function
+
+function add(a, b){
+  return a+b;
+};
+
+// (add(8,8));
+
+function Square(val){
+  return val*val;
+
 }
 
-let userName = email("sahilverma22146@gmail.com");
-// console.log(userName);
+// function addSquare(a,b){
+//   return Square(add(a,b))
+// }
+// console.log(addSquare(5,4))
 
-let message = userName("DSA");
-let print =message("u re gr8 men");
-console.log(print);
-// ES6
-// const print = email("sahilverma22146@gmail.com")("hello sir")("u  emotions bro@@");
-// console.log(print);
+// function composeTwoFunctions(fun1 , fun2){
+//   return function (a,b){
+//     return fun2(fun1(a,b)); // fun1 = add , fun2 = Square
+//   }
+
+// }
+
+// const task = composeTwoFunctions(add, Square);
+// console.log(task(2,3))
+
+// Es6
+const c2f =(fn1,fn2)=>(a,b)=>fn2(fn1(a,b)); // fn1 = add ,  fn2 = square
+//  c2f takes 2 parameters fn1 , fn2 which return a function tht takes two parameters a, b which return fn2(fn1(a,b))
+
+const task = c2f(add, Square);
+console.log(task(2,3))
+
+
+
+
+
+
+
+
+
+
+
+
+
