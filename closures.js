@@ -73,16 +73,16 @@
 
 //  composition --- composing infiinite functions in one function
 
-function add(a, b){
-  return a+b;
-};
+// function add(a, b){
+//   return a+b;
+// };
 
-// (add(8,8));
+// // (add(8,8));
 
-function Square(val){
-  return val*val;
+// function Square(val){
+//   return val*val;
 
-}
+// }
 
 // function addSquare(a,b){
 //   return Square(add(a,b))
@@ -100,11 +100,11 @@ function Square(val){
 // console.log(task(2,3))
 
 // Es6
-const c2f =(fn1,fn2)=>(a,b)=>fn2(fn1(a,b)); // fn1 = add ,  fn2 = square
-//  c2f takes 2 parameters fn1 , fn2 which return a function tht takes two parameters a, b which return fn2(fn1(a,b))
+// const c2f =(fn1,fn2)=>(a,b)=>fn2(fn1(a,b)); // fn1 = add ,  fn2 = square
+// //  c2f takes 2 parameters fn1 , fn2 which return a function tht takes two parameters a, b which return fn2(fn1(a,b))
 
-const task = c2f(add, Square);
-console.log(task(2,3))
+// const task = c2f(add, Square);
+// console.log(task(2,3))
 
 
 
