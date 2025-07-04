@@ -1,9 +1,8 @@
 // objects are those entities which store methods n attributes
 
 // js objects have spcl property called prototype which is basically a kind of object n it created itself inside the object
-//  prototype are prewritten 
+//  prototype are prewritten
 //  when we create arr indexes --- the array is considered as a obj becuse we dont defined the push(), pop() etc but we use them
-
 
 // objects
 // const student={
@@ -13,7 +12,6 @@
 //         console.log("marks", this.roll_no); // this.marks = student.marks
 //     },
 // };
-
 
 // const employee ={
 //     calTax(){
@@ -35,42 +33,39 @@
 
 //  when the object n the prototype have both same method than when we call that same method then we only use the function which is own bby the object not by the prototype
 
-
 //  --- clsss --- template to create n object
 
+class factory {
+  // constructors invoked itself automatically
+  // one class have only one constructor n we can pass arguments in the constructor
+  // constructor() {
+  //     console.log("creating the new object");
+  // }
 
-class factory{
- // constructors invoked itself automatically 
- // one class have only one constructor n we can pass arguments in the constructor
-    // constructor() { 
-    //     console.log("creating the new object");
-    // }
+  constructor(brand) {
+    console.log("creating the new object");
+    this.Carbrand = brand;
+  }
 
+  start() {
+    console.log("start");
+  }
 
-    constructor(brand) { 
-        console.log("creating the new object");
-        this.Carbrand=brand;
-    }
-
-
-    start(){
-        console.log("start");
-
-    }
-
-    stop(){
-        console.log("stop");
-    }
-    setbrand(brand){
-        this.brand=brand;
-    }
-};
-// let fortuner = new factory(); // created fortuner obhject
-let fortuner = new factory("fortuner"); // constructor  
-fortuner.brand="lexus"; // chnhe the methods of objects
-// fortuner.setbrand("helux");
-// console.log(setbrand())
+  stop() {
+    console.log("stop");
+  }
+  setbrand(brand) {
+    this.newbrand = brand;
+  }
+}
+let fortuner = new factory(); // created fortuner obhject
+// let fortuner = new factory("helux"); // constructor
+// fortuner.setbrand(); // chnhe the methods of objects
+// fortuner.newbrand
+// console.log(fortuner.newbrand="hellux");
+console.log(setbrand(helluc))
 // fortuner.stop()
+
 //  --- INHERITANCE ---
 // Passing prop n methods from parent to child
 
@@ -83,10 +78,9 @@ fortuner.brand="lexus"; // chnhe the methods of objects
 
 // }
 
-// class child extends parent {} // use inheritance 
+// class child extends parent {} // use inheritance
 
 // let objchild = new child();
-
 
 // class person{
 
@@ -113,10 +107,7 @@ fortuner.brand="lexus"; // chnhe the methods of objects
 
 // let sahilObj = new engineer();
 
-
-
-//  super --- used to call the constructor of its parent clss to access the parent's properties n methods 
-
+//  super --- used to call the constructor of its parent clss to access the parent's properties n methods
 
 // class person{
 
@@ -137,7 +128,7 @@ fortuner.brand="lexus"; // chnhe the methods of objects
 // class engineer extends person {
 //     constructor( branch){
 //         console.log(" enter child constructor");
-//         super(); // to invoke parent class constructor 
+//         super(); // to invoke parent class constructor
 //         this.branch = branch;
 //         console.log(" exit child constructor");
 
@@ -150,16 +141,13 @@ fortuner.brand="lexus"; // chnhe the methods of objects
 
 // let engObj = new  engineer( " chemical-engineer");
 
-
-
 //  practice problem
-
 
 // class user{
 //     // name(){
 //     //     console.log("name");
 //     // }
-    
+
 //     // email(){
 //     //     console.log("email-address");
 //     // }
@@ -171,14 +159,14 @@ fortuner.brand="lexus"; // chnhe the methods of objects
 //     viewData(){
 //         console.log("name :", this.name);
 //         console.log("email :", this.email);
-        
+
 //     }
 // }
 
 // class Admin extends user{
 //     constructor(name, email){
 //         super(name,email);
-     
+
 //     }
 // }
 
@@ -186,8 +174,3 @@ fortuner.brand="lexus"; // chnhe the methods of objects
 // userObj.name="sahil";
 // userObj.email="Sahilverma22146@gmail.com";
 // let adminObj = new Admin("admin" , "admin@gmail.com");
-
-
-
-
-

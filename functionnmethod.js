@@ -108,13 +108,13 @@
 
 // reduce --- reduce the arry into a single value
 
-let arr=[1,2,3,4];
+// let arr=[1,2,3,4];
 
-let new_arr=arr.reduce((res , current)=>{
-    return (res+ current);
+// let new_arr=arr.reduce((res , current)=>{
+//     return (res+ current);
 
-});
-console.log(new_arr);
+// });
+// console.log(new_arr);
 // console.log("hello world");
 
 
@@ -131,5 +131,85 @@ console.log(new_arr);
 // console.log(print());
 
 
+// An explicit return is a function where the return keyword is used in its body.
+// implicit return which means that you don’t need to use the keyword return to return a value.
 
 
+// what ()=>{} saolve
+
+// Normal function	this depends on how the function is called
+// In JavaScript, this usually refers to the object that is calling the function.
+
+// const obj = {
+//     name: "Alice",
+//     greet: function() {
+//         console.log(this.name); // "Alice"
+        
+//         function inner() {
+//             console.log(this.name); // ❌ undefined (or window.name if not strict mode)
+//         }
+        
+//         inner();
+//     }
+// };
+
+// obj.greet();
+
+// above problrm solve by 
+// const obj = {
+//     name: "Alice",
+//     greet: function() {
+//         const self = this;  // save this
+
+//         function inner() {
+//             console.log(self.name); // ✅ "Alice"
+//         }
+        
+//         inner();
+//     }
+// };
+
+// obj.greet();
+
+// Arrow function	this is lexically inherited from surrounding
+// Arrow functions do not create their own this.
+// They capture the this from the surrounding context.
+// const obj = {
+//     name: "Alice",
+//     greet: function() {
+//         const inner = () => {
+//             console.log(this.name); // ✅ "Alice"
+//         };
+        
+//         inner();
+//     }
+// };
+
+// obj.greet();
+
+
+// function composition process of combining two or more functions such that the output of one function becomes the input of the next.
+
+// const fxn1 = x => x +1;
+// const fxn2 = y => y+2;
+
+// console.log(fxn1(fxn2(2)))
+
+// Composing Functions -- compose() function that applies functions from right to left:
+
+// const compose = (f, g) => x => f(g(x)); // HOF --> return a function on call
+
+// const fxn1 = x => x +1;
+// const fxn2 = y => y+2;
+
+// const getFun = compose(fxn1 , fxn2)
+// console.log(getFun(3))
+
+// returning composed functions ---> To return a composed function from an array of functions in JavaScript
+
+const f1 = x => x+1;
+const f2 = x => x+2;
+const f3 = x => x+3;
+
+const composedFunction = compose([f1 , f2 , f3]) ; // f(g(h(x)) this will reurn in composed function
+console.log(composedFunction(2))

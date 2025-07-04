@@ -6,10 +6,10 @@
 // console.log(typeof students); // object but it dont have keys it hace indexes
 
 
-let marks =[23,45,67,89];
-console.log(marks[0]);
-console.log(marks[1]);
-console.log(marks[2]);
+// let marks =[23,45,67,89];
+// console.log(marks[0]);
+// console.log(marks[1]);
+// console.log(marks[2]);
 // console.log(marks[3]);
 // console.log(marks[4]); // gives undefined
 // marks[0]=456;
@@ -98,4 +98,26 @@ console.log(marks[2]);
 
 
 
+// objects and arrays declared with const can still be mutated (changed inside), even though you can't reassign the whole object.
+// because It does not make the contents of the object or array constant.
+// objects
+// const person = { name: "Alice", age: 25 };
 
+// // ✅ You can mutate (change) the object
+// person.age = 26;
+// console.log(person);  // { name: "Alice", age: 26 }
+
+// // ❌ You cannot reassign the entire object
+// person = { name: "Bob" };  // ❌ Error: Assignment to constant variable
+
+
+// array
+
+const numbers = [1, 2, 3];
+
+// ✅ You can mutate (change) the array
+// numbers.push(4);
+// console.log(numbers);  // [1, 2, 3, 4]
+
+// // ❌ You cannot reassign the entire array
+// numbers = [5, 6, 7];  // ❌ Error: Assignment to constant variable
