@@ -1,8 +1,16 @@
-// async prog --- in this code doesnot run line by line 
+// async prog --- in this code doesnot run line by line
+
+// A callback is a function that you pass to another function, so that it can be executed later.
+// Types of Callback Functions
+// ✅ Synchronous: Called immediately (e.g. forEach, map)
+
+// ✅ Asynchronous: Called later (e.g. setTimeout, API call)
 
 // setTimeout(()=>{
 //     console.log("hello")
 // },4000); // 1sec=1000 millisec
+
+// console.log("hello sir");
 
 // another syntex
 
@@ -12,36 +20,36 @@
 
 // setTimeout(hello,2000);
 
+//  Callbacks --- are the functions that passess as a argument to another function
 
-//  Callbacks --- are the functions that passess as n  argument to another function
+// function sum(a, b) {
+//   console.log("sum of (a+b) is  :", a + b);
+// }
+// // sum(1,2)
 
-// function sum(a,b){
-//     console.log("sum of (a+b) is  :" , a+b);
+// function calculator(sum, a, b) {
+//   sum(a, b);
 // }
 
-// function calculator(a, b , sum){
-//     sum(a,b);
+// calculator(sum, 1, 2);
+
+// function getNextData(dataId) {
+//   console.log(getData + 1);
 // }
 
-// calculator(1,2,sum);
+// callback-hell --- nesting of callback
+// function getData(dataId, getNextData) { //here getNext Data is a callback function
+//   setTimeout(() => {
+//     console.log("data", dataId);
+//     if (getNextData) {
+//       getNextData(dataId)// this case run only when we have the call-back function
+//     }
+//   }, 2000);
+// }
 
+// getData(4570); //no callback function passed
 
-// callback-hell --- nesting of callback 
-
-function getData(dataId , getNextData){
-    setTimeout( ()=>{
-        console.log("data" , dataId);
-        if(getNextData){  // this case run only when we have the call-back function 
-            getNextData();
-        }
-        
-    },2000 );
-}
-
-// getData(4570);
-
-
-//  // callback-hell
+//  // callback-hell aslo known as pyramid of doom
 // getData(1, ()=>{ // 1--- dataid
 //     getData(2 , ()=>{
 //         getData(3,()=>{
@@ -57,12 +65,26 @@ function getData(dataId , getNextData){
 //     })
 // })
 
-// promises solve callback-hell
+
+
+// inversion of control -- /
+
+/*
+ when we are passing a function as a callback to another function then we are giving the control of our written to code to some othr code ---this 
+ is  a major problem
+
+*/
+
+/*
+ promises solve callback-hell
+ Promises were introduced in JavaScript to make asynchronous code more manageable, readable, and structured — 
+ especially to solve the problem of callback hell.
+*/
+
 
 // 3 states--- 1. pending state
 //             2. fillfull state --- resolve()
 //             3. rejected state --- rejected()
-  
 
 // let promise = new Promise ((resolve, reject) =>{  // RESOLVE --- OUR TASK IS COMPLETED  REJECT --- OUR TASK IS FILLFULL WITH SOME ERRORS
 //     console.log("i am a promise");
@@ -70,9 +92,8 @@ function getData(dataId , getNextData){
 //     reject("some error");
 // });
 
-
 //promise --- promise.catch() --- use for rject
- //       --- promise.then() --- use for resolve 
+//       --- promise.then() --- use for resolve
 // const getPromise =()=>{
 //     return new Promise ((resolve, reject) =>{
 //         console.log("i am a promise");
@@ -84,7 +105,7 @@ function getData(dataId , getNextData){
 // let promise = getPromise();
 
 // // execute when the promise is fillfulled
-// promise.then( (res)=>{  // result --- gives the value we give in the resolve  
+// promise.then( (res)=>{  // result --- gives the value we give in the resolve
 //     console.log("promise fillfulled" , res);
 // });
 
@@ -93,40 +114,32 @@ function getData(dataId , getNextData){
 //     console.log(" failed" ,err ); // err gives the val we give in the reject
 // });
 
-
-
-
-
 // function getData(dataId , getNextData){
 //     return new Promise ((resolve , reject)=>{
 //         setTimeout( ()=>{
 //             console.log("data" , dataId);
 //             resolve("success");
-//             if(getNextData){  // this case run only when we have the call-back function 
+//             if(getNextData){  // this case run only when we have the call-back function
 //                 getNextData();
 //             }
-            
+
 //         },2000 );
 
 //     });
-   
+
 // }
 
-
-
 // getData(1);
-
 
 // function async(){
 //     return new Promise((resolve , reject)=>{
 //         setTimeout(() => {
 //             console.log("some data1");
 //             resolve("success");
-            
+
 //         }, 2000);
 
 //     });
-
 
 // }
 
@@ -142,11 +155,10 @@ function getData(dataId , getNextData){
 //         setTimeout(() => {
 //             console.log("some data1");
 //             resolve("success");
-            
+
 //         }, 4000);
 
 //     });
-
 
 // }
 
@@ -155,11 +167,10 @@ function getData(dataId , getNextData){
 //         setTimeout(() => {
 //             console.log("some data2");
 //             resolve("success");
-            
+
 //         }, 4000);
 
 //     });
-
 
 // }
 // console.log("getting data1.....");   // here we are getting data1 n  getting data2 timeout start at same  time
@@ -177,8 +188,7 @@ function getData(dataId , getNextData){
 
 // });
 
-
-//  now we wnt getting data1 and after data1 then  getting data2 
+//  now we wnt getting data1 and after data1 then  getting data2
 
 //  promise chainning
 // console.log("getting data1.....");
@@ -194,7 +204,6 @@ function getData(dataId , getNextData){
 
 // });
 
-
 // ---- async await ----
 
 // async function return a promise
@@ -204,7 +213,6 @@ function getData(dataId , getNextData){
 // }
 
 //  await --- pause the execution untill the promise is not settled ( jbh tk await vali line ka code means vho promise apni value return nhi krta tb tk code execute nhi hoga)
-
 
 // function api(){
 //     return  new Promise((resolve , reject)=>{
@@ -229,7 +237,7 @@ function getData(dataId , getNextData){
 // }
 
 // getWetherData();
-// better way 
+// better way
 // async await >> promise-chain >> callback-Hell
 
 //  IIFE --- IMMEDIATELY INVOKED FUNCTION EXPRESSION --- USE FOR DIRECT EXECUTION NOT REQ OF FUNCTION CALLBACK
