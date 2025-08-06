@@ -1,6 +1,6 @@
 // async prog --- in this code doesnot run line by line
 
-// A callback is a function that you pass to another function, so that it can be executed later.
+// A callback is a function that you pass as an argument to another function, so that it can be executed later.
 // Types of Callback Functions
 // ✅ Synchronous: Called immediately (e.g. forEach, map)
 
@@ -25,7 +25,7 @@
 // function sum(a, b) {
 //   console.log("sum of (a+b) is  :", a + b);
 // }
-// // sum(1,2)
+// sum(1,2)
 
 // function calculator(sum, a, b) {
 //   sum(a, b);
@@ -49,7 +49,7 @@
 
 // getData(4570); //no callback function passed
 
-//  // callback-hell aslo known as pyramid of doom
+// callback-hell aslo known as pyramid of doom
 // getData(1, ()=>{ // 1--- dataid
 //     getData(2 , ()=>{
 //         getData(3,()=>{
@@ -65,8 +65,6 @@
 //     })
 // })
 
-
-
 // inversion of control -- /
 
 /*
@@ -81,38 +79,49 @@
  especially to solve the problem of callback hell.
 */
 
-
 // 3 states--- 1. pending state
 //             2. fillfull state --- resolve()
 //             3. rejected state --- rejected()
 
-// let promise = new Promise ((resolve, reject) =>{  // RESOLVE --- OUR TASK IS COMPLETED  REJECT --- OUR TASK IS FILLFULL WITH SOME ERRORS
-//     console.log("i am a promise");
-//     resolve("fillfulled");
-//     reject("some error");
+// let promise = new Promise((resolve, reject) => {
+//   // RESOLVE --- OUR TASK IS COMPLETED  REJECT --- OUR TASK IS FILLFULL WITH SOME ERRORS
+//   console.log("i am a promise");
+//   resolve("fillfulled");
+//   reject("some error");
 // });
 
 //promise --- promise.catch() --- use for rject
 //       --- promise.then() --- use for resolve
-// const getPromise =()=>{
-//     return new Promise ((resolve, reject) =>{
-//         console.log("i am a promise");
-//         resolve("success");
-//         // reject("error");
-//     });
-// };
+const getPromise = () => {
+  return new Promise((resolve, reject) => {
+    console.log("i am a promise");
+    resolve("success");
+    //reject("error");
+  });
+};
 
-// let promise = getPromise();
+let promise = getPromise();
 
-// // execute when the promise is fillfulled
-// promise.then( (res)=>{  // result --- gives the value we give in the resolve
-//     console.log("promise fillfulled" , res);
-// });
+// execute when the promise is fillfulled
+promise.then( (res)=>{  // result --- gives the value we give in the resolve
+    console.log("promise fillfulled" , res);
+});
 
 //  execute when the promise is rejected
 // promise.catch((err)=>{ // error
 //     console.log(" failed" ,err ); // err gives the val we give in the reject
 // });
+
+
+
+/*
+CALBACKS --> IN CALLBACKS WE ARE PASSING A FUNCTION TO ANOTHER FUNCTION
+
+PROMISE --> WE ARE ATTACHING A FUNCTION TO A PROMISE OBJECT
+PROMISE OBJECTS ARE IMMUTABLE 
+FETCH() FUNCTION RETURN A PROMISE
+*/
+
 
 // function getData(dataId , getNextData){
 //     return new Promise ((resolve , reject)=>{

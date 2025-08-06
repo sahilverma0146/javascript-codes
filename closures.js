@@ -2,13 +2,13 @@
 
 // function outer(num){
 
-//     console.log(num);
+//     console.log(num , "THE CONSOLE VALUE");
 
 //     return num;
 // }
-// // outer(5); // output--- ony 5  //  not give any value becuse yeh function ko sirf call krega jho yh fxn value  returnkrege usko usee nhi krega
+//  const vl = outer(5); // output--- ony 5  //  not give any value becuse yeh function ko sirf call krega jho yh fxn value  returnkrege usko usee nhi krega
 
-// console.log(outer(5));// output --- 5,5 becuse yeh vho vlue ah rhi h use bhi use kre ga
+// console.log(vl);// output --- 5,5 becuse yeh vho vlue ah rhi h use bhi use kre ga
 
 // function outer(){
 //     const name="prtik";
@@ -27,49 +27,62 @@
 
 // }
 
-// // outer(); // dont print anything becuse in outer function the inner function is calling and it return some vl which is now uused by the outer function
+// outer(); // dont print anything becuse in outer function the inner function is calling and it return some vl which is now uused by the outer function
 
 // const print=outer();  // output--- prtik
 // print();
 
-// function add(a){
-//     return function  middle(b){
-//         return function inner(c){
-//             return a+b+c;
+function add(a){
+    return function  middle(b){
+        return function inner(c){
+            return a+b+c;
 
-//         }
-//     }
-// }
+        }
+    }
+}
+
 // let step1 = add(2);  // step1 hve now the complete return function strting from middle
-// console.log(step1);
+// console.log(step1); // RETURN ONLY THE MIDDLE FUNCTION
+
 // let step2 = step1(4);
-// console.log(step2);
+// console.log(step2); //RETURN THE INNER FUNCTION
+
 // let step3= step2(5);
 // console.log(step3)
 
 //  ES6
-// let print = add(2)(3)(4);  // a=2 , b=3 , c=4
+// let print = add(2)(4)(5);  // a=2 , b=3 , c=4
 // console.log(print);
 
-//   currying
 
-// function email(mailId) {
-//   return function data(subject) {
-//     return function body(message) {
-//       return `You Are Sending to  ${mailId} having ${subject} with${message} `;
-//     };
-//   };
-// }
+// A closure is a function that "remembers" the variables from its lexical scope, even when the function is executed already
 
-// let userName = email("sahilverma22146@gmail.com");
-// // console.log(userName);
+// Closures let functions access variables from an outer function even after the outer function has returned.
 
-// let message = userName("DSA");
+
+
+
+//   currying -->  A function with multiple parameters is transformed into a sequence of functions, each taking a single parameter.
+
+function email(mailId) {
+  return function data(subject) {
+    return function body(message) {
+      return `You Are Sending to  ${mailId} having ${subject} with${message} `;
+    };
+  };
+}
+
+let userName = email("sahilverma22146@gmail.com");
+console.log(userName);
+
+let message = userName("DSA");
+console.log(message);
+
 // let print =message("u re gr8 men");
 // console.log(print);
 // // ES6
-// // const print = email("sahilverma22146@gmail.com")("hello sir")("u  emotions bro@@");
-// // console.log(print);
+const print = email("sahilverma22146@gmail.com")("hello sir")("u  emotions bro@@");
+console.log(print);
 
 //  composition --- composing infiinite functions in one function
 
